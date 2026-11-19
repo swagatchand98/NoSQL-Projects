@@ -1,0 +1,11 @@
+.git
+.env
+results
+submissions
+checkpoints
+*.pem
+*.key
+
+.secrets
+backups
+reference

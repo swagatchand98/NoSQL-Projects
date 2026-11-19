@@ -1,0 +1,8 @@
+{
+  "chapter": 5,
+  "activity": 3,
+  "name": "value_boundaries",
+  "database": "college_ch05",
+  "seed_reset": "chapter-scoped only",
+  "reference": "7898bc8907937941a0e2af152654e28f5860bcb4"
+}

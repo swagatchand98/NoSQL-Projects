@@ -1,0 +1,140 @@
+[
+  {
+    "sku": "LAP-001",
+    "name": "ProBook 15",
+    "category": "Laptops",
+    "price": 899.99,
+    "brand": "TechCorp",
+    "stock": 45,
+    "tags": [
+      "business",
+      "15-inch"
+    ],
+    "specifications": {
+      "cpu": "i7-13700H",
+      "ram": "16GB",
+      "ssd": "512GB"
+    },
+    "rating": 4.5,
+    "active": true
+  },
+  {
+    "sku": "LAP-002",
+    "name": "UltraBook 14",
+    "category": "Laptops",
+    "price": 1299.99,
+    "brand": "TechCorp",
+    "stock": 12,
+    "tags": [
+      "premium",
+      "14-inch",
+      "lightweight"
+    ],
+    "specifications": {
+      "cpu": "i9-13900H",
+      "ram": "32GB",
+      "ssd": "1TB"
+    },
+    "rating": 4.8,
+    "active": true
+  },
+  {
+    "sku": "MON-001",
+    "name": "WideView 27",
+    "category": "Monitors",
+    "price": 449.99,
+    "brand": "DisplayPlus",
+    "stock": 30,
+    "tags": [
+      "4K",
+      "27-inch",
+      "USB-C"
+    ],
+    "specifications": {
+      "resolution": "3840x2160",
+      "panel": "IPS",
+      "refresh": "60Hz"
+    },
+    "rating": 4.3,
+    "active": true
+  },
+  {
+    "sku": "MON-002",
+    "name": "GamePanel 32",
+    "category": "Monitors",
+    "price": 699.99,
+    "brand": "DisplayPlus",
+    "stock": 8,
+    "tags": [
+      "gaming",
+      "32-inch",
+      "144Hz"
+    ],
+    "specifications": {
+      "resolution": "2560x1440",
+      "panel": "VA",
+      "refresh": "144Hz"
+    },
+    "rating": 4.7,
+    "active": true
+  },
+  {
+    "sku": "KBD-001",
+    "name": "TypeMaster Pro",
+    "category": "Keyboards",
+    "price": 149.99,
+    "brand": "KeyTech",
+    "stock": 100,
+    "tags": [
+      "mechanical",
+      "wireless",
+      "backlit"
+    ],
+    "specifications": {
+      "switch": "Cherry MX Brown",
+      "layout": "Full-Size",
+      "battery": "200h"
+    },
+    "rating": 4.6,
+    "active": true
+  },
+  {
+    "sku": "KBD-002",
+    "name": "SilentType 60",
+    "category": "Keyboards",
+    "price": 89.99,
+    "brand": "KeyTech",
+    "stock": 0,
+    "tags": [
+      "mechanical",
+      "60-percent",
+      "silent"
+    ],
+    "specifications": {
+      "switch": "Cherry MX Silent Red",
+      "layout": "60%",
+      "battery": "150h"
+    },
+    "rating": 4.4,
+    "active": false
+  },
+  {
+    "sku": "LAP-003",
+    "name": "BudgetBook 15",
+    "category": "Laptops",
+    "price": 549.99,
+    "brand": "ValueTech",
+    "stock": 0,
+    "tags": [
+      "budget",
+      "15-inch"
+    ],
+    "specifications": {
+      "cpu": "i5-1335U",
+      "ram": "8GB",
+      "ssd": "256GB"
+    },
+    "rating": 3.9,
+    "active": false
+  }
+]

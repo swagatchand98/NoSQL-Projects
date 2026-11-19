@@ -1,0 +1,8 @@
+{
+  "chapter": 2,
+  "activity": 4,
+  "name": "pre2010_prices",
+  "database": "college_ch02",
+  "seed_reset": "chapter-scoped only",
+  "reference": "7898bc8907937941a0e2af152654e28f5860bcb4"
+}

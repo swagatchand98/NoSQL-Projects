@@ -1,0 +1,18 @@
+{
+  "generator": {
+    "records_full": 50000,
+    "records_quick": 1000,
+    "seed": 42
+  },
+  "sample": {
+    "_id": 42,
+    "sku": "SKU-42",
+    "name": "Product 42",
+    "category": "cat2",
+    "price": 42,
+    "stock": 42,
+    "tags": [
+      "wired"
+    ]
+  }
+}

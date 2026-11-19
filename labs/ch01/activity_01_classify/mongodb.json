@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Redis",
+    "family": "Key-Value"
+  },
+  {
+    "name": "MongoDB",
+    "family": "Document"
+  },
+  {
+    "name": "Apache Cassandra",
+    "family": "Wide-Column"
+  },
+  {
+    "name": "Neo4j",
+    "family": "Graph"
+  },
+  {
+    "name": "Elasticsearch",
+    "family": "Search/Document"
+  },
+  {
+    "name": "DynamoDB",
+    "family": "Key-Value/Document"
+  },
+  {
+    "name": "InfluxDB",
+    "family": "Time-Series"
+  },
+  {
+    "name": "OrientDB",
+    "family": "Multi-Model"
+  },
+  {
+    "name": "CouchDB",
+    "family": "Document"
+  },
+  {
+    "name": "HBase",
+    "family": "Wide-Column"
+  }
+]

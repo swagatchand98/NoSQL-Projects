@@ -1,0 +1,40 @@
+services:
+  mongo1:
+    image: mongo:7.0
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    volumes: ["data1:/data/db"]
+  mongo2:
+    image: mongo:7.0
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    volumes: ["data2:/data/db"]
+  mongo3:
+    image: mongo:7.0
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    volumes: ["data3:/data/db"]
+  init:
+    image: mongo:7.0
+    entrypoint: ["bash", "-c"]
+    command:
+      - |
+        until mongosh --host mongo1 --quiet --eval 'db.adminCommand({ping:1})'; do sleep 2; done
+        mongosh --host mongo1 --quiet --eval 'try { rs.status() } catch(e) { rs.initiate({_id:"rs0",members:[{_id:0,host:"mongo1:27017",priority:2},{_id:1,host:"mongo2:27017"},{_id:2,host:"mongo3:27017"}]}) }'
+    depends_on: [mongo1, mongo2, mongo3]
+  restore:
+    image: mongo:7.0
+    profiles: [pitr]
+    command: [mongod, --replSet, restore, --bind_ip_all]
+  lab:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    environment:
+      MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+      PITR_TARGET_URI: mongodb://restore:27017/?replicaSet=restore
+    volumes: ["../results:/work/results", "../backups:/work/backups"]
+    depends_on:
+      init:
+        condition: service_completed_successfully
+volumes:
+  data1:
+  data2:
+  data3:

@@ -1,0 +1,25 @@
+services:
+  mongo:
+    image: mongo:7.0
+  cassandra:
+    image: cassandra:4.1
+    environment:
+      MAX_HEAP_SIZE: 512M
+      HEAP_NEWSIZE: 100M
+  neo4j:
+    image: neo4j:5.26-community
+    environment:
+      NEO4J_AUTH: none
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+  lab:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      CASSANDRA_HOST: cassandra
+      NEO4J_URI: bolt://neo4j:7687
+      THREAT_FEEDS: ${THREAT_FEEDS:-}
+    volumes: ["../results:/work/results", "../data:/work/data"]
+    depends_on: [mongo, cassandra, neo4j]

@@ -1,0 +1,50 @@
+[
+  {
+    "app": "Ride-Sharing",
+    "domain": "profiles",
+    "family": "Document",
+    "rationale": "Nested preferences read together"
+  },
+  {
+    "app": "Ride-Sharing",
+    "domain": "ride_history",
+    "family": "Wide-Column",
+    "rationale": "Append and time-range queries"
+  },
+  {
+    "app": "Ride-Sharing",
+    "domain": "tracking",
+    "family": "Key-Value",
+    "rationale": "Latest positions with TTL"
+  },
+  {
+    "app": "Ride-Sharing",
+    "domain": "payments",
+    "family": "Document",
+    "rationale": "Transactional updates"
+  },
+  {
+    "app": "Social Media",
+    "domain": "feed",
+    "family": "Document",
+    "rationale": "Flexible content"
+  },
+  {
+    "app": "Social Media",
+    "domain": "social_graph",
+    "family": "Graph",
+    "rationale": "Multi-hop relationships"
+  },
+  {
+    "app": "Social Media",
+    "domain": "sentiment",
+    "family": "Wide-Column",
+    "rationale": "Time series"
+  },
+  {
+    "app": "Social Media",
+    "domain": "media",
+    "family": "Object storage",
+    "rationale": "Large binary objects"
+  }
+]

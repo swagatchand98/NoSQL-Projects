@@ -1,0 +1,5 @@
+# Overlay on the selected topology. Requires Docker Compose 2.24+ for !reset.
+services:
+  lab:
+    image: ${LAB_IMAGE:?Set LAB_IMAGE to your authorized published image tag}
+    build: !reset null

@@ -1,0 +1,37 @@
+services:
+  mongo1:
+    image: mongo:7.0
+    entrypoint: [bash, /bootstrap.sh]
+    environment:
+      RS_MEMBER: '1'
+    volumes: ["../.secrets:/input:ro", "./bootstrap-auth.sh:/bootstrap.sh:ro", "data1:/data/db"]
+  mongo2:
+    image: mongo:7.0
+    entrypoint: [bash, /bootstrap.sh]
+    environment:
+      RS_MEMBER: '1'
+    volumes: ["../.secrets:/input:ro", "./bootstrap-auth.sh:/bootstrap.sh:ro", "data2:/data/db"]
+  mongo3:
+    image: mongo:7.0
+    entrypoint: [bash, /bootstrap.sh]
+    environment:
+      RS_MEMBER: '1'
+    volumes: ["../.secrets:/input:ro", "./bootstrap-auth.sh:/bootstrap.sh:ro", "data3:/data/db"]
+  lab:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    volumes: ["../.secrets:/input:ro", "../results:/work/results"]
+  exporter:
+    image: percona/mongodb_exporter:0.44.0
+    user: "0:0"
+    profiles: [exporter]
+    environment:
+      MONGODB_URI: ${EXPORTER_MONGODB_URI:-mongodb://mongo1:27017}
+    command: ["--collect-all"]
+    volumes: ["../.secrets:/input:ro"]
+    ports: ["127.0.0.1:9216:9216"]
+volumes:
+  data1:
+  data2:
+  data3:

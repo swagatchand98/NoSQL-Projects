@@ -1,0 +1,8 @@
+{
+  "chapter": 4,
+  "activity": 4,
+  "name": "repeat_import",
+  "database": "college_ch04",
+  "seed_reset": "chapter-scoped only",
+  "reference": "7898bc8907937941a0e2af152654e28f5860bcb4"
+}

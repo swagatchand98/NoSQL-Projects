@@ -1,0 +1,8 @@
+{
+  "chapter": 2,
+  "activity": 1,
+  "name": "environment",
+  "database": "college_ch02",
+  "seed_reset": "chapter-scoped only",
+  "reference": "7898bc8907937941a0e2af152654e28f5860bcb4"
+}

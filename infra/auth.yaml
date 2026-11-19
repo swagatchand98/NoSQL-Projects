@@ -1,0 +1,15 @@
+services:
+  mongo:
+    image: mongo:7.0
+    entrypoint: [bash, /bootstrap.sh]
+    volumes: ["../.secrets:/input:ro", "./bootstrap-auth.sh:/bootstrap.sh:ro", "data:/data/db"]
+  lab:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+    volumes: ["../.secrets:/input:ro", "../results:/work/results"]
+    depends_on: [mongo]
+volumes:
+  data:

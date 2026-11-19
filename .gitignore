@@ -1,0 +1,18 @@
+.env
+__pycache__/
+.venv/
+*.pem
+*.key
+volumes/
+checkpoints/
+
+.secrets/
+backups/
+data/public-threats.json
+
+# Machine-specific settings and generated evidence / submission packages.
+.env.*
+!.env.example
+compose.local.yaml
+results/
+submissions/chapters/

@@ -1,0 +1,9 @@
+services:
+  backup:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    entrypoint: [bash, /backup-hourly.sh]
+    environment:
+      MONGO_URI: mongodb://mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0
+    volumes: ["../scripts/backup-hourly.sh:/backup-hourly.sh:ro", "../backups:/work/backups"]

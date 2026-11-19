@@ -1,0 +1,8 @@
+{
+  "chapter": 6,
+  "activity": 4,
+  "name": "covered_query",
+  "database": "college_ch06",
+  "seed_reset": "chapter-scoped only",
+  "reference": "7898bc8907937941a0e2af152654e28f5860bcb4"
+}

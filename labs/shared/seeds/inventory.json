@@ -1,0 +1,14 @@
+[
+  {
+    "sku": "WGT-001",
+    "name": "SmartWatch Pro",
+    "price": 299.99,
+    "stock": 50
+  },
+  {
+    "sku": "WGT-002",
+    "name": "FitBand Lite",
+    "price": 49.99,
+    "stock": 200
+  }
+]

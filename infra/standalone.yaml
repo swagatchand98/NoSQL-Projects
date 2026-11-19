@@ -1,0 +1,24 @@
+services:
+  mongo:
+    image: mongo:7.0
+    volumes: ["data:/data/db"]
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand({ping:1})"]
+      interval: 3s
+      retries: 30
+  lab:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      MONGO_URI_ATLAS: ${MONGO_URI_ATLAS:-}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      ANNUAL_REPORTS_URL: ${ANNUAL_REPORTS_URL:-}
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes: ["../results:/work/results", "../backups:/work/backups"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+volumes:
+  data:

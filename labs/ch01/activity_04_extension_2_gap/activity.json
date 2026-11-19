@@ -1,0 +1,8 @@
+{
+  "chapter": 1,
+  "activity": 4,
+  "name": "extension_2_gap",
+  "database": "college_ch01",
+  "seed_reset": "chapter-scoped only",
+  "reference": "7898bc8907937941a0e2af152654e28f5860bcb4"
+}

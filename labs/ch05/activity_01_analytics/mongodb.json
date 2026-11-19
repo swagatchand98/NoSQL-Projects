@@ -1,0 +1,92 @@
+[
+  {
+    "order_id": "ORD-101",
+    "customer": "Arjun",
+    "status": "completed",
+    "total": 2500,
+    "items": 3,
+    "date": "2024-01-15",
+    "region": "North"
+  },
+  {
+    "order_id": "ORD-102",
+    "customer": "Sneha",
+    "status": "completed",
+    "total": 1800,
+    "items": 1,
+    "date": "2024-01-20",
+    "region": "South"
+  },
+  {
+    "order_id": "ORD-103",
+    "customer": "Arjun",
+    "status": "completed",
+    "total": 3200,
+    "items": 5,
+    "date": "2024-02-01",
+    "region": "North"
+  },
+  {
+    "order_id": "ORD-104",
+    "customer": "Kavya",
+    "status": "cancelled",
+    "total": 900,
+    "items": 2,
+    "date": "2024-02-05",
+    "region": "East"
+  },
+  {
+    "order_id": "ORD-105",
+    "customer": "Rahul",
+    "status": "completed",
+    "total": 5600,
+    "items": 8,
+    "date": "2024-02-10",
+    "region": "West"
+  },
+  {
+    "order_id": "ORD-106",
+    "customer": "Arjun",
+    "status": "completed",
+    "total": 1200,
+    "items": 2,
+    "date": "2024-02-15",
+    "region": "North"
+  },
+  {
+    "order_id": "ORD-107",
+    "customer": "Sneha",
+    "status": "completed",
+    "total": 4100,
+    "items": 6,
+    "date": "2024-03-01",
+    "region": "South"
+  },
+  {
+    "order_id": "ORD-108",
+    "customer": "Kavya",
+    "status": "completed",
+    "total": 2900,
+    "items": 4,
+    "date": "2024-03-05",
+    "region": "East"
+  },
+  {
+    "order_id": "ORD-109",
+    "customer": "Rahul",
+    "status": "pending",
+    "total": 7800,
+    "items": 10,
+    "date": "2024-03-10",
+    "region": "West"
+  },
+  {
+    "order_id": "ORD-110",
+    "customer": "Divya",
+    "status": "completed",
+    "total": 1500,
+    "items": 1,
+    "date": "2024-03-15",
+    "region": "North"
+  }
+]

@@ -1,0 +1,27 @@
+services:
+  mongo:
+    image: mongo:7.0
+    volumes: ["mongo-data:/data/db"]
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand({ping:1})"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  app:
+    build: .
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:1.5b}
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+  ollama:
+    image: ollama/ollama:latest
+    profiles: [model]
+    volumes: ["ollama-data:/root/.ollama"]
+volumes:
+  mongo-data:
+  ollama-data:

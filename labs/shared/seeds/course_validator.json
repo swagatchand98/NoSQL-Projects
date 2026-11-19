@@ -1,0 +1,78 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "course_name",
+      "course_code",
+      "instructor",
+      "schedule",
+      "enrolled_students"
+    ],
+    "properties": {
+      "course_name": {
+        "bsonType": "string",
+        "description": "Course name is required"
+      },
+      "course_code": {
+        "bsonType": "string",
+        "pattern": "^[A-Z]{4}\\d{3}$",
+        "description": "Format: XXXX000"
+      },
+      "instructor": {
+        "bsonType": "string",
+        "description": "Instructor name is required"
+      },
+      "credits": {
+        "bsonType": "int",
+        "minimum": 1,
+        "maximum": 6
+      },
+      "schedule": {
+        "bsonType": "object",
+        "required": [
+          "days",
+          "time",
+          "room"
+        ],
+        "properties": {
+          "days": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "string"
+            }
+          },
+          "time": {
+            "bsonType": "string"
+          },
+          "room": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "enrolled_students": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "name",
+            "email"
+          ],
+          "properties": {
+            "name": {
+              "bsonType": "string"
+            },
+            "email": {
+              "bsonType": "string"
+            },
+            "grade": {
+              "bsonType": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

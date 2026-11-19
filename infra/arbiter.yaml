@@ -1,0 +1,10 @@
+services:
+  arbiter:
+    image: mongo:7.0
+    command: [mongod, --replSet, arb, --bind_ip_all]
+  data1:
+    image: mongo:7.0
+    command: [mongod, --replSet, arb, --bind_ip_all]
+  data2:
+    image: mongo:7.0
+    command: [mongod, --replSet, arb, --bind_ip_all]

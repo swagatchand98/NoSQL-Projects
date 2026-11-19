@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "CVE-2024-6387-0",
+    "title": "OpenSSH signal handling race",
+    "package": "openssh",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-07-01",
+    "source": "https://ubuntu.com/security/CVE-2024-6387",
+    "summary": "A signal handling race in sshd can permit remote unauthenticated attacks on affected versions.",
+    "mitigation": "Check the release-specific Ubuntu advisory; install the fixed openssh package for that release and verify the running service has been restarted.",
+    "status": "Active",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Active scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2023-4911-0",
+    "title": "glibc dynamic loader overflow",
+    "package": "glibc",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2023-10-03",
+    "source": "https://ubuntu.com/security/CVE-2023-4911",
+    "summary": "GLIBC_TUNABLES processing can allow local privilege escalation through affected setuid programs.",
+    "mitigation": "Identify the distribution release and glibc version; install its vendor security update and restart affected processes.",
+    "status": "Active",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Active scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-3094-0",
+    "title": "XZ upstream supply-chain compromise",
+    "package": "xz-utils",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-03-29",
+    "source": "https://ubuntu.com/security/CVE-2024-3094",
+    "summary": "Malicious code was found in upstream xz 5.6.x tarballs. Ubuntu states no released Ubuntu versions were affected.",
+    "mitigation": "Check package provenance and the vendor advisory. Released Ubuntu versions are not affected; investigate experimental images separately.",
+    "status": "Active",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Active scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-6387-1",
+    "title": "OpenSSH signal handling race",
+    "package": "openssh",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-07-01",
+    "source": "https://ubuntu.com/security/CVE-2024-6387",
+    "summary": "A signal handling race in sshd can permit remote unauthenticated attacks on affected versions.",
+    "mitigation": "Check the release-specific Ubuntu advisory; install the fixed openssh package for that release and verify the running service has been restarted.",
+    "status": "Anticipated",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Anticipated scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2023-4911-1",
+    "title": "glibc dynamic loader overflow",
+    "package": "glibc",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2023-10-03",
+    "source": "https://ubuntu.com/security/CVE-2023-4911",
+    "summary": "GLIBC_TUNABLES processing can allow local privilege escalation through affected setuid programs.",
+    "mitigation": "Identify the distribution release and glibc version; install its vendor security update and restart affected processes.",
+    "status": "Anticipated",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Anticipated scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-3094-1",
+    "title": "XZ upstream supply-chain compromise",
+    "package": "xz-utils",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-03-29",
+    "source": "https://ubuntu.com/security/CVE-2024-3094",
+    "summary": "Malicious code was found in upstream xz 5.6.x tarballs. Ubuntu states no released Ubuntu versions were affected.",
+    "mitigation": "Check package provenance and the vendor advisory. Released Ubuntu versions are not affected; investigate experimental images separately.",
+    "status": "Anticipated",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Anticipated scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-6387-2",
+    "title": "OpenSSH signal handling race",
+    "package": "openssh",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-07-01",
+    "source": "https://ubuntu.com/security/CVE-2024-6387",
+    "summary": "A signal handling race in sshd can permit remote unauthenticated attacks on affected versions.",
+    "mitigation": "Check the release-specific Ubuntu advisory; install the fixed openssh package for that release and verify the running service has been restarted.",
+    "status": "Evolving",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Evolving scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2023-4911-2",
+    "title": "glibc dynamic loader overflow",
+    "package": "glibc",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2023-10-03",
+    "source": "https://ubuntu.com/security/CVE-2023-4911",
+    "summary": "GLIBC_TUNABLES processing can allow local privilege escalation through affected setuid programs.",
+    "mitigation": "Identify the distribution release and glibc version; install its vendor security update and restart affected processes.",
+    "status": "Evolving",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Evolving scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-3094-2",
+    "title": "XZ upstream supply-chain compromise",
+    "package": "xz-utils",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-03-29",
+    "source": "https://ubuntu.com/security/CVE-2024-3094",
+    "summary": "Malicious code was found in upstream xz 5.6.x tarballs. Ubuntu states no released Ubuntu versions were affected.",
+    "mitigation": "Check package provenance and the vendor advisory. Released Ubuntu versions are not affected; investigate experimental images separately.",
+    "status": "Evolving",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Evolving scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-6387-3",
+    "title": "OpenSSH signal handling race",
+    "package": "openssh",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-07-01",
+    "source": "https://ubuntu.com/security/CVE-2024-6387",
+    "summary": "A signal handling race in sshd can permit remote unauthenticated attacks on affected versions.",
+    "mitigation": "Check the release-specific Ubuntu advisory; install the fixed openssh package for that release and verify the running service has been restarted.",
+    "status": "Resolved",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Resolved scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2023-4911-3",
+    "title": "glibc dynamic loader overflow",
+    "package": "glibc",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2023-10-03",
+    "source": "https://ubuntu.com/security/CVE-2023-4911",
+    "summary": "GLIBC_TUNABLES processing can allow local privilege escalation through affected setuid programs.",
+    "mitigation": "Identify the distribution release and glibc version; install its vendor security update and restart affected processes.",
+    "status": "Resolved",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Resolved scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  },
+  {
+    "_id": "CVE-2024-3094-3",
+    "title": "XZ upstream supply-chain compromise",
+    "package": "xz-utils",
+    "platform": "Linux; release-specific applicability",
+    "source_date": "2024-03-29",
+    "source": "https://ubuntu.com/security/CVE-2024-3094",
+    "summary": "Malicious code was found in upstream xz 5.6.x tarballs. Ubuntu states no released Ubuntu versions were affected.",
+    "mitigation": "Check package provenance and the vendor advisory. Released Ubuntu versions are not affected; investigate experimental images separately.",
+    "status": "Resolved",
+    "classroom_observation": {
+      "fictional": true,
+      "description": "Resolved scenario for an isolated training image; not evidence about a real host. XZ scenarios assess experimental builds, not released Ubuntu."
+    }
+  }
+]

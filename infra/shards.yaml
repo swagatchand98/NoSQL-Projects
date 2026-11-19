@@ -1,0 +1,29 @@
+services:
+  config:
+    image: mongo:7.0
+    command: [mongod, --configsvr, --replSet, cfg, --port, '27017', --bind_ip_all]
+  shard1:
+    image: mongo:7.0
+    command: [mongod, --shardsvr, --replSet, s1, --port, '27017', --bind_ip_all]
+  shard2:
+    image: mongo:7.0
+    command: [mongod, --shardsvr, --replSet, s2, --port, '27017', --bind_ip_all]
+  router:
+    image: mongo:7.0
+    command: [mongos, --configdb, 'cfg/config:27017', --port, '27017', --bind_ip_all]
+    depends_on: [config, shard1, shard2]
+  init:
+    image: mongo:7.0
+    volumes: ["./init-shards.sh:/init.sh:ro"]
+    entrypoint: [bash, /init.sh]
+    depends_on: [router]
+  lab:
+    build:
+      context: ..
+      dockerfile: Dockerfile.labs
+    environment:
+      MONGO_URI: mongodb://router:27017
+    volumes: ["../results:/work/results"]
+    depends_on:
+      init:
+        condition: service_completed_successfully

@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "CVE-2024-6387",
+    "source": "https://ubuntu.com/security/CVE-2024-6387",
+    "text": "OpenSSH signal handling race. A signal handling race in sshd can permit remote unauthenticated attacks on affected versions. Defensive guidance: Check the release-specific Ubuntu advisory; install the fixed openssh package for that release and verify the running service has been restarted. Before changing a system, record its distribution release and installed package version. Match that release against the linked vendor advisory rather than assuming all Linux systems have the same exposure. Plan the update in a maintenance window and retain the package manager output for review. After updating, verify the installed version and any affected running services. Record the verification date and the advisory reference. Classroom lifecycle labels describe a fictional training environment; they do not establish that a real host was compromised or that exploitation is currently occurring."
+  },
+  {
+    "_id": "CVE-2023-4911",
+    "source": "https://ubuntu.com/security/CVE-2023-4911",
+    "text": "glibc dynamic loader overflow. GLIBC_TUNABLES processing can allow local privilege escalation through affected setuid programs. Defensive guidance: Identify the distribution release and glibc version; install its vendor security update and restart affected processes. Before changing a system, record its distribution release and installed package version. Match that release against the linked vendor advisory rather than assuming all Linux systems have the same exposure. Plan the update in a maintenance window and retain the package manager output for review. After updating, verify the installed version and any affected running services. Record the verification date and the advisory reference. Classroom lifecycle labels describe a fictional training environment; they do not establish that a real host was compromised or that exploitation is currently occurring."
+  },
+  {
+    "_id": "CVE-2024-3094",
+    "source": "https://ubuntu.com/security/CVE-2024-3094",
+    "text": "XZ upstream supply-chain compromise. Malicious code was found in upstream xz 5.6.x tarballs. Ubuntu states no released Ubuntu versions were affected. Defensive guidance: Check package provenance and the vendor advisory. Released Ubuntu versions are not affected; investigate experimental images separately. Before changing a system, record its distribution release and installed package version. Match that release against the linked vendor advisory rather than assuming all Linux systems have the same exposure. Plan the update in a maintenance window and retain the package manager output for review. After updating, verify the installed version and any affected running services. Record the verification date and the advisory reference. Classroom lifecycle labels describe a fictional training environment; they do not establish that a real host was compromised or that exploitation is currently occurring."
+  }
+]

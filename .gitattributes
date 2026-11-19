@@ -1,0 +1,9 @@
+# Keep Bash, Docker build inputs, and documentation consistent on Windows/WSL.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.zip binary
+*.docx binary
+*.archive binary

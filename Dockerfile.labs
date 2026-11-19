@@ -1,0 +1,19 @@
+FROM mongo:7.0 AS mongo-tools
+
+FROM python:3.11-slim-bookworm
+WORKDIR /work
+# Use the tools already shipped in the official image. Do not add MongoDB's
+# APT repository or relax signature verification to work around an old key.
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates openssl libgssapi-krb5-2 && rm -rf /var/lib/apt/lists/*
+COPY --from=mongo-tools /usr/bin/mongodump /usr/local/bin/mongodump
+COPY --from=mongo-tools /usr/bin/mongorestore /usr/local/bin/mongorestore
+# Fail early if a future tools image changes its runtime library requirements.
+RUN mongodump --version && mongorestore --version
+COPY requirements.txt requirements-labs.txt ./
+RUN pip install --no-cache-dir torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir -r requirements-labs.txt
+COPY LICENSE ATTRIBUTION.md ./
+COPY labs labs
+COPY app app
+COPY data data
+ENTRYPOINT ["python", "-m", "labs.run"]
